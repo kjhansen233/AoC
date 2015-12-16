@@ -16,12 +16,7 @@ def main():
 	ingred=[2,0,-2,0,3],[0,5,-3,0,3],[0,0,5,-1,8],[0,-1,0,5,8]
 	# [capacity, durability, flavour, texture, calories] 
 
-	myperms=[]
-	first = 0
-	second = 0 
-	third = 0
-	fourth = 0 
-
+	myperms=[];first = 1;
 ##### Initialize list of permutations #####
 	overall = 0
 	while first < 100:
@@ -30,13 +25,13 @@ def main():
 			third = 100 - (first + second)
 			while third > 0:
 				fourth = 100 - (first + second + third)
-				if checkForZeros([first, second, third, fourth]) ==1:
-					myperms.append([first, second, third, fourth])	
+				#if checkForZeros([first, second, third, fourth]) ==1:
+				myperms.append([first, second, third, fourth])	
 				overall+=1
 				third -=1
 			second -=1
 		first +=1
-	print overall
+	print "Loops to generate permutation: ",overall
 	
 	#initialize variables
 	scoreCard = 0;tempScore =0;count = 0
@@ -66,8 +61,8 @@ def main():
 		#test current score vs best score
 		if tempScore > scoreCard:
 			scoreCard = tempScore
-			#print scoreCard
+			
 		count+=1
-		
+	print "Best Score: ",scoreCard
 		
 main()
