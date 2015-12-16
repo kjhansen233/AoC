@@ -16,9 +16,9 @@ def main():
 	ingred=[2,0,-2,0,3],[0,5,-3,0,3],[0,0,5,-1,8],[0,-1,0,5,8]
 	# [capacity, durability, flavour, texture, calories] 
 
-	myperms=[];first = 1;
+	
 ##### Initialize list of permutations #####
-	overall = 0
+	myperms=[];first = 1;overall = 0;
 	while first < 100:
 		second = 100-first
 		while second > 0:
